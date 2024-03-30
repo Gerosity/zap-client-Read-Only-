@@ -92,7 +92,7 @@ https://github.com/Gerosity/Apex-Protection         - A protection guide, not fu
 **4. Clone repo**
 
     git clone https://github.com/Gerosity/zap-client-Read-Only-.git
-    cd zap-client [Read-Only]
+    cd zap-client-Read-Only
     cd zap-client
 
 **5. Build & Run**
