@@ -102,7 +102,7 @@ https://github.com/Gerosity/Apex-Protection         - A protection guide, not fu
     cmake ..
     make
     chmod +x run.sh
-    ./run.sh
+    sudo ./run.sh
 
 **6. Press Insert to toggle the Menu (You can only interact with the Menu and the game when the menu is active).**
 **Note: You will need to alt+tab between the cheat overlay and apex.**
