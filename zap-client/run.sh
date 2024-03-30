@@ -1,55 +1,53 @@
 #!/bin/bash
 sudo clear
-#Reason for sudo = enter password first
 #Run this in the build folder!!!
 #Credits to:
 #0xAgartha - https://www.unknowncheats.me/forum/members/5290135.html
 #ghostrazzor - https://www.unknowncheats.me/forum/members/2764232.html
  
-# Get the directory where the script is executed from
+# Function to handle errors
+handle_error() {
+    echo "Error: $1"
+    exit 1
+}
+ 
+# Main directory path is where the script is executed
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
  
-# Original binary directory is in /build folder
-original_binary_dir="$script_dir"
- 
-# Original binary name
-original_binary_name="zapclient"
- 
-# Log file directory is the same as the script directory
-log_dir="$script_dir"
- 
-# Log file path
-log_file="$log_dir/script_log.txt"
+# Log file path in the main directory
+log_file="$script_dir/script_log.txt"
  
 # Function to log messages
 log() {
-    echo "$(date +"%Y-%m-%d %H:%M:%S") - $1" >> "$log_file"
+    echo "$(date +"%Y-%m-%d %H:%M:%S") - $1" >> "$log_file" || handle_error "Failed to write to log file: $log_file"
 }
  
-# Create log file
-mkdir -p "$log_dir"
-touch "$log_file"
+# Create log file directory if it doesn't exist
+mkdir -p "$script_dir" || handle_error "Failed to create log directory: $script_dir"
  
 # Log script start
 log "Script started"
  
-# Generate a random number for the name length
-random_width=$((5 + RANDOM % 11))
+# Original binary name
+original_binary_name="zapclient"
  
 # Generate a random name for the temporary binary
-random_name=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w $random_width | head -n 1)
+temp_binary_name=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
  
-# Temporary path for the temporary binary with the new name
-temp_binary_path="/tmp/$random_name"
+# Temporary path for the temporary binary
+temp_binary_path="/$script_dir/$temp_binary_name"
  
-# Copy the original binary to the new path (to keep the original intact)
-if ! cp "$original_binary_dir/$original_binary_name" "$temp_binary_path"; then
-    log "Failed to copy binary: $original_binary_dir/$original_binary_name to $temp_binary_path"
+# Copy the original binary to the temporary path
+if ! cp "$script_dir/$original_binary_name" "$temp_binary_path"; then
+    log "Failed to copy binary: $script_dir/$original_binary_name to $temp_binary_path"
     exit 1
 fi
-log "Binary copied: $original_binary_dir/$original_binary_name to $temp_binary_path"
+log "Binary copied: $script_dir/$original_binary_name to $temp_binary_path"
  
-# Execute the binary under the new name
+# Log the binary being executed
+log "Executing binary: $temp_binary_name"
+
+# Credits and such
 sleep 1
 echo "Run Script For zap-client"
 sleep 1
@@ -61,10 +59,11 @@ echo "ghostrazzor - https://www.unknowncheats.me/forum/members/2764232.html"
 sleep 1
 echo "-----------------------------------------------------------------------"
 #Shit way of adding a separator but sorry not sorry
-echo "Executing $original_binary_name"
+echo "Executing $original_binary_name as $temp_binary_name"
 sleep 0.5
-sudo "$temp_binary_path" &
-pid=$! # Get the PID of the executed binary
+
+# Execute the binary
+(sudo "./$temp_binary_name") & pid=$! # Get the PID of the executed binary
 log "Binary executed with PID: $pid"
  
 # Hide the PID of the executed binary and its child processes
@@ -87,16 +86,11 @@ fi
 # Wait for the binary to finish execution
 if ! wait $pid; then
     log "Failed to execute binary with PID: $pid"
+    rm "$temp_binary_name"
     exit 1
 fi
-log "Binary execution completed"
  
-# Delete the temporary binary after execution
-if ! rm "$temp_binary_path"; then
-    log "Failed to delete temporary binary: $temp_binary_path"
-else
-    log "Temporary binary deleted: $temp_binary_path"
-fi
+log "Binary execution completed"
  
 # Log script end
 log "Script completed"
