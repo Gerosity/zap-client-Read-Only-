@@ -85,7 +85,8 @@ fi
  
 # Wait for the binary to finish execution
 if ! wait $pid; then
-    log "Failed to execute binary with PID: $pid"
+    #log "Failed to execute binary with PID: $pid"
+    log "Deleting binary with PID: $pid"
     rm "$temp_binary_name"
     exit 1
 fi
