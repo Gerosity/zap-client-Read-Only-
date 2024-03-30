@@ -56,5 +56,8 @@ target_include_directories(zapclient PUBLIC
   ${CMAKE_CURRENT_SOURCE_DIR}/Overlay
 )
 
-#Create a folder for Configs
+# Create a folder for Configs
 file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/Configs)
+
+# Copy run.sh to build folder
+file(COPY ${CMAKE_SOURCE_DIR}/run.sh DESTINATION ${CMAKE_BINARY_DIR})
