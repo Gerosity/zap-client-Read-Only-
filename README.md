@@ -1,5 +1,6 @@
 # zap-client [Apex External Cheat For Linux] [Read-Only Version]
 zap-client but with no writing to memory
+
 **Updated to Game Version v3.0.62.29 (Season 20) (26.03.24)**
 
 By **Gerosity**
