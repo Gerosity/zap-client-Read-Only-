@@ -1,34 +1,34 @@
 #pragma once
 //https://www.unknowncheats.me/forum/apex-legends/319804-apex-legends-reversal-structs-offsets.html
  
-//GameVersion = v3.0.62.29
+//GameVersion = v3.0.62.30
 
 // Core    
 constexpr long OFF_REGION = 0x140000000;                      //[Static]->Region
-constexpr long OFF_LEVEL = 0x16f9090;                         //[Miscellaneous]->LevelName
-constexpr long OFF_LOCAL_PLAYER = 0x2182bf8;                  //[Miscellaneous]->LocalPlayer
-constexpr long OFF_ENTITY_LIST = 0x1DD40F8;                   //[Miscellaneous]->cl_entitylist
+constexpr long OFF_LEVEL = 0x16f9140;                         //[Miscellaneous]->LevelName
+constexpr long OFF_LOCAL_PLAYER = 0x2182c78;                  //[Miscellaneous]->LocalPlayer
+constexpr long OFF_ENTITY_LIST = 0x1DD4178;                   //[Miscellaneous]->cl_entitylist
 constexpr long OFF_NAME_INDEX = 0x38;                         //nameIndex
 constexpr long OFF_NAME_LIST = 0xC5FEC00;                     //[Miscellaneous]->NameList
-constexpr long OFF_GAMEMODE = 0x021ba460;                     //mp_gamemode
+constexpr long OFF_GAMEMODE = 0x021ba4e0;                     //mp_gamemode
 constexpr long OFF_SQUAD_ID = 0x0334;                          //m_squadID
  
 // HUD
-constexpr long OFF_VIEWRENDER = 0x73f14f8;                    //[Miscellaneous]->ViewRenderer
+constexpr long OFF_VIEWRENDER = 0x73f14f0;                    //[Miscellaneous]->ViewRenderer
 constexpr long OFF_VIEWMATRIX = 0x11a350;                     //[Miscellaneous]->ViewMatrix
  
 // Buttons
 constexpr long OFF_INATTACK = 0x073f2798;                     //[Buttons]->in_attack
-constexpr long OFF_IN_JUMP = 0x073f2878;                      //[Buttons]->in_jump
+constexpr long OFF_IN_JUMP = 0x073f2890;                      //[Buttons]->in_jump
 constexpr long OFF_IN_DUCK = 0x073f2978;                      //[Buttons]->in_duck
 constexpr long OFF_IN_FORWARD = 0x073f26c8;                //[Buttons]->in_forward
 constexpr long OFF_TRAVERSAL_START_TIME = 0x2af0;          //[RecvTable.DT_LocalPlayerExclusive]->m_traversalStartTime
 constexpr long OFF_TRAVERSAL_PROGRESS = 0x2aec;            //[RecvTable.DT_LocalPlayerExclusive]->m_traversalProgress
 constexpr long OFF_WALL_RUN_START_TIME = 0x3584;           //[RecvTable.DT_LocalPlayerExclusive]->m_wallRunStartTime
 constexpr long OFF_WALL_RUN_CLEAR_TIME = 0x3588;           //[RecvTable.DT_LocalPlayerExclusive]->m_wallRunClearTime
-constexpr long OFF_GRAPPLE_ACTIVE = 0x1e38;              //[RecvTable.DT_NPC_Titan]       Not sure
-constexpr long OFF_GRAPPLE = 0x1da8;                      //[RecvTable.DT_NPC_Titan]        Not sure
-constexpr long OFF_GRAPPLE_ATTACHED = 0x0048;              // [RecvTable.DT_GrappleData]       Not sure
+constexpr long OFF_GRAPPLE_ACTIVE = 0x1e38;              //[RecvTable.DT_NPC_Titan]       Not sure (Unused)
+constexpr long OFF_GRAPPLE = 0x1da8;                      //[RecvTable.DT_NPC_Titan]        Not sure (Unused)
+constexpr long OFF_GRAPPLE_ATTACHED = 0x0048;              // [RecvTable.DT_GrappleData]       Not sure (Unused)
  
 // Player
 constexpr long OFF_HEALTH = 0x0318;                           //[RecvTable.DT_Player]->m_iHealth
@@ -44,7 +44,7 @@ constexpr long OFF_ZOOMING = 0x1bd1;                          //[RecvTable.DT_Pl
 constexpr long OFF_TEAM_NUMBER = 0x0328;                      //[RecvTable.DT_BaseEntity]->m_iTeamNum
 constexpr long OFF_NAME = 0x0471;                             //[RecvTable.DT_BaseEntity]->m_iName
 constexpr long OFF_LIFE_STATE = 0x0680;                       //[RecvTable.DT_Player]->m_lifeState
-constexpr long OFF_BLEEDOUT_STATE = 0x26e0;                   //[RecvTable.DT_Player]->m_bleedoutState  
+constexpr long OFF_BLEEDOUT_STATE = 0x26e0;                   //[RecvTable.DT_Player]->m_bleedoutState
 constexpr long OFF_LAST_VISIBLE_TIME = 0x198d + 0x3;          //[RecvTable.DT_BaseCombatCharacter]->m_hudInfo_visibilityTestAlwaysPasses + 0x3
 constexpr long OFF_LAST_AIMEDAT_TIME = 0x198d + 0x3 + 0x8;    //[RecvTable.DT_BaseCombatCharacter]->m_hudInfo_visibilityTestAlwaysPasses + 0x3 + 0x8
 constexpr long OFF_VIEW_ANGLES = 0x2534 - 0x14;               //[DataMap.C_Player]-> m_ammoPoolCapacity - 0x14
@@ -60,7 +60,7 @@ constexpr long OFF_PROJECTILESPEED = 0x04e4 + 0x19c0;         //projectile_launc
 constexpr long OFF_OFFHAND_WEAPON = 0x1944;                   //m_latestNonOffhandWeapons
 constexpr long OFF_CURRENTZOOMFOV = 0x15d0 + 0x00b8;          //m_playerData + m_curZoomFOV
 constexpr long OFF_TARGETZOOMFOV = 0x15d0 + 0x00bc;           //m_playerData + m_targetZoomFOV
-constexpr long OFF_MOUSE_SENSITIVITY = 0x0216f730;            //mouse_sensitivity
+constexpr long OFF_MOUSE_SENSITIVITY = 0x0216f7b0;            //mouse_sensitivity (Unused)
 constexpr long OFF_SKIN = 0x0d58;                             //m_nSkin
 constexpr long OFF_TIME_BASE = 0x2088;                        //m_currentFramePlayer.timeBase
 constexpr long OFF_WEAPON_DISCARDED = 0x1599;                 //[RecvTable.DT_WeaponX]->m_discarded
