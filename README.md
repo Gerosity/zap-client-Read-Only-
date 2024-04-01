@@ -1,7 +1,7 @@
 # zap-client [Apex External Cheat For Linux] [Read-Only Version]
 zap-client but with no writing to memory
 
-**Updated to Game Version v3.0.62.29 (Season 20) (26.03.24)**
+**Updated to Game Version v3.0.62.30 (Season 20) (01.04.24)**
 
 By **Gerosity**
 
@@ -30,6 +30,9 @@ https://github.com/Gerosity/Apex-Protection         - A protection guide, not fu
     Configs - Custom Configs
 
 # Changelog:
+    1.04.24
+    Updated offsets to latest update (Game Version v3.0.62.30)
+
     30.03.24 - Version 1.0.5
     Legitbot:
         New Aimbot Mode (An old xap-client smoothing method), testing for now
