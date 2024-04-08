@@ -1,7 +1,7 @@
 # zap-client [Apex External Cheat For Linux] [Read-Only Version]
 zap-client but with no writing to memory
 
-**Updated to Game Version v3.0.62.30 (Season 20) (01.04.24)**
+**Updated to Game Version v3.0.63.32 (Season 20) (08.04.24)**
 
 By **Gerosity**
 
@@ -30,6 +30,9 @@ https://github.com/Gerosity/Apex-Protection         - A protection guide, not fu
     Configs - Custom Configs
 
 # Changelog:
+    8.04.24 - Version 1.0.6
+    Updated offsets to latest version (Game Version v3.0.63.32)
+    
     1.04.24
     Updated offsets to latest update (Game Version v3.0.62.30)
 
