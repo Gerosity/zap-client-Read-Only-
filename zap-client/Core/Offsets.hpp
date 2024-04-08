@@ -1,34 +1,34 @@
 #pragma once
 //https://www.unknowncheats.me/forum/apex-legends/319804-apex-legends-reversal-structs-offsets.html
  
-//GameVersion = v3.0.62.30
+//GameVersion = v3.0.63.32
 
 // Core    
 constexpr long OFF_REGION = 0x140000000;                      //[Static]->Region
-constexpr long OFF_LEVEL = 0x16f9140;                         //[Miscellaneous]->LevelName
-constexpr long OFF_LOCAL_PLAYER = 0x2182c78;                  //[Miscellaneous]->LocalPlayer
-constexpr long OFF_ENTITY_LIST = 0x1DD4178;                   //[Miscellaneous]->cl_entitylist
+constexpr long OFF_LEVEL = 0x16f9500;                         //[Miscellaneous]->LevelName
+constexpr long OFF_LOCAL_PLAYER = 0x21830f8;                  //[Miscellaneous]->LocalPlayer
+constexpr long OFF_ENTITY_LIST = 0x1DD45F8;                   //[Miscellaneous]->cl_entitylist              ???
 constexpr long OFF_NAME_INDEX = 0x38;                         //nameIndex
-constexpr long OFF_NAME_LIST = 0xC5FEC00;                     //[Miscellaneous]->NameList
-constexpr long OFF_GAMEMODE = 0x021ba4e0;                     //mp_gamemode
+constexpr long OFF_NAME_LIST = 0xC5FF080;                     //[Miscellaneous]->NameList
+constexpr long OFF_GAMEMODE = 0x021ba960;                     //mp_gamemode
 constexpr long OFF_SQUAD_ID = 0x0334;                          //m_squadID
  
 // HUD
-constexpr long OFF_VIEWRENDER = 0x73f14f0;                    //[Miscellaneous]->ViewRenderer
+constexpr long OFF_VIEWRENDER = 0x73f1970;                    //[Miscellaneous]->ViewRenderer
 constexpr long OFF_VIEWMATRIX = 0x11a350;                     //[Miscellaneous]->ViewMatrix
  
 // Buttons
-constexpr long OFF_INATTACK = 0x073f2798;                     //[Buttons]->in_attack
-constexpr long OFF_IN_JUMP = 0x073f2890;                      //[Buttons]->in_jump
-constexpr long OFF_IN_DUCK = 0x073f2978;                      //[Buttons]->in_duck
-constexpr long OFF_IN_FORWARD = 0x073f26c8;                //[Buttons]->in_forward
+constexpr long OFF_INATTACK = 0x073f2bf8;                     //[Buttons]->in_attack
+constexpr long OFF_IN_JUMP = 0x073f2d00;                      //[Buttons]->in_jump
+constexpr long OFF_IN_DUCK = 0x073f2df8;                      //[Buttons]->in_duck
+constexpr long OFF_IN_FORWARD = 0x073f2b48;                //[Buttons]->in_forward
 constexpr long OFF_TRAVERSAL_START_TIME = 0x2af0;          //[RecvTable.DT_LocalPlayerExclusive]->m_traversalStartTime
 constexpr long OFF_TRAVERSAL_PROGRESS = 0x2aec;            //[RecvTable.DT_LocalPlayerExclusive]->m_traversalProgress
 constexpr long OFF_WALL_RUN_START_TIME = 0x3584;           //[RecvTable.DT_LocalPlayerExclusive]->m_wallRunStartTime
 constexpr long OFF_WALL_RUN_CLEAR_TIME = 0x3588;           //[RecvTable.DT_LocalPlayerExclusive]->m_wallRunClearTime
-constexpr long OFF_GRAPPLE_ACTIVE = 0x1e38;              //[RecvTable.DT_NPC_Titan]       Not sure (Unused)
-constexpr long OFF_GRAPPLE = 0x1da8;                      //[RecvTable.DT_NPC_Titan]        Not sure (Unused)
-constexpr long OFF_GRAPPLE_ATTACHED = 0x0048;              // [RecvTable.DT_GrappleData]       Not sure (Unused)
+constexpr long OFF_GRAPPLE_ACTIVE = 0x1e38;              //[RecvTable.DT_NPC_Titan]       Wrong (Unused)
+constexpr long OFF_GRAPPLE = 0x1da8;                      //[RecvTable.DT_NPC_Titan]        Wrong (Unused)
+constexpr long OFF_GRAPPLE_ATTACHED = 0x0048;              // [RecvTable.DT_GrappleData]       Wrong (Unused)
  
 // Player
 constexpr long OFF_HEALTH = 0x0318;                           //[RecvTable.DT_Player]->m_iHealth
@@ -60,7 +60,7 @@ constexpr long OFF_PROJECTILESPEED = 0x04e4 + 0x19c0;         //projectile_launc
 constexpr long OFF_OFFHAND_WEAPON = 0x1944;                   //m_latestNonOffhandWeapons
 constexpr long OFF_CURRENTZOOMFOV = 0x15d0 + 0x00b8;          //m_playerData + m_curZoomFOV
 constexpr long OFF_TARGETZOOMFOV = 0x15d0 + 0x00bc;           //m_playerData + m_targetZoomFOV
-constexpr long OFF_MOUSE_SENSITIVITY = 0x0216f7b0;            //mouse_sensitivity (Unused)
+constexpr long OFF_MOUSE_SENSITIVITY = 0x0216fc30;            //mouse_sensitivity (Unused)
 constexpr long OFF_SKIN = 0x0d58;                             //m_nSkin
 constexpr long OFF_TIME_BASE = 0x2088;                        //m_currentFramePlayer.timeBase
 constexpr long OFF_WEAPON_DISCARDED = 0x1599;                 //[RecvTable.DT_WeaponX]->m_discarded
@@ -72,4 +72,4 @@ constexpr long OFF_GLOW_ENABLE = 0x26c;                       //[DT_HighlightSet
 constexpr long OFF_GLOW_THROUGH_WALL = 0x26c;                 //[DT_HighlightSettings].       
 constexpr long OFF_GLOW_FIX = 0x268;                        //                                      
 constexpr long OFF_GLOW_HIGHLIGHT_ID = 0x28C;                 //[DT_HighlightSettings].m_highlightServerActiveStates     
-constexpr long OFF_GLOW_HIGHLIGHTS = 0xBB24350;                //highlightsettings
+constexpr long OFF_GLOW_HIGHLIGHTS = 0xBB247D0;                //highlightsettings
