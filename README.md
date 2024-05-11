@@ -1,5 +1,5 @@
-# zap-client [Apex External Cheat For Linux]
-**Updated to Game Version v3.0.67.34 (Season 21) (07.05.24)**
+# zap-client Read Only Version [Apex External Cheat For Linux]
+**Updated to Game Version v3.0.68.50 (Season 21) (10.05.24)**
 
 By **Gerosity**
 
@@ -13,12 +13,9 @@ Instructions are down below
 <summary><b>Features</b></summary>
     
     Legitbot - Aimbot, RCS, Visuals
-    Ragebot - Aimbot, RCS
-    Flickbot
     Triggerbot
-    Glow - Player, Viewmodel & Item
     ESP - Enemy & Teammate, Spectator List, Crosshair, Radar
-    Misc - Movement, Camera (Quick Turn), Rapid Fire (For Semi-Auto & Burst Weapons), Skin Changer (Basic, not to be confused with a model changer)
+    Misc - Rapid Fire (For Semi-Auto & Burst Weapons)
     Settings - Disable Overlay, Disable ESP, FPS Cap
     Configs - Custom Configs, Premade Configs
 
@@ -26,6 +23,10 @@ Instructions are down below
 
 <details>
 <summary><b>Changelog</b></summary>
+    
+    10.05.24 - Version 1.1.1
+    - Updated offsets to latest version (Game Version v3.0.68.50)
+    - Fixed Spectator List (Might get patched sooner or later)
 
     07.05.24 - Version 1.1.0 - Season 21 Update
     Updated offsets to latest version (Game Version v3.0.67.34)
@@ -180,6 +181,10 @@ https://github.com/Gerosity/Apex-Protection         - A protection guide, not fu
     cmake ..
     make
     chmod +x run.sh
+
+    Then Either:
+    sudo ./zapclient
+    or
     ./run.sh
 
 **6. Press Insert to toggle the Menu (You can only interact with the Menu and the game when the menu is active).**
