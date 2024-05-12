@@ -1549,6 +1549,10 @@ struct Legitbot
 			int totalYawIncrementInt = RoundHalfEven(AL1AF0(aimbotDelta.x));
 			int totalPitchIncrementInt = RoundHalfEven(AL1AF0(aimbotDelta.y * -1));
 
+			//Deadzone - Are We Close Enough Yet?
+			if (fabs(CurrentTarget->aimbotDesiredAnglesIncrement.x) < Features::Aimbot::Deadzone) totalPitchIncrementInt = 0;
+			if (fabs(CurrentTarget->aimbotDesiredAnglesIncrement.y) < Features::Aimbot::Deadzone) totalYawIncrementInt = 0;
+
 			// Move Mouse
 			if (totalPitchIncrementInt == 0 && totalYawIncrementInt == 0)
 				return;
@@ -1604,6 +1608,10 @@ struct Legitbot
 			// Turn into integers
 			int totalPitchIncrementInt = RoundHalfEven(AL1AF0(totalPitchIncrement));
 			int totalYawIncrementInt = RoundHalfEven(AL1AF0(totalYawIncrement));
+
+			//Deadzone - Are We Close Enough Yet?
+			if (fabs(CurrentTarget->aimbotDesiredAnglesIncrement.x) < Features::Aimbot::Deadzone) totalPitchIncrementInt = 0;
+			if (fabs(CurrentTarget->aimbotDesiredAnglesIncrement.y) < Features::Aimbot::Deadzone) totalYawIncrementInt = 0;
 
 			// Move Mouse
 			if (totalPitchIncrementInt == 0 && totalYawIncrementInt == 0) return;
