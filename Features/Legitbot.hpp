@@ -1632,7 +1632,7 @@ struct Legitbot
 			} else { // Hipfire
 				SmoothValue = powf(Features::Aimbot::AdvancedHipfireSmooth, 0.4f);
 			}
-			SmoothValue = std::min(0.99f, SmoothValue);
+			SmoothValue = std::min(0.990f, SmoothValue);
 		}
 
 		else if (!Features::Aimbot::AdvancedAim) {
