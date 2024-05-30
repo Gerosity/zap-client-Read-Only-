@@ -1,32 +1,31 @@
 #pragma once
 #include <string>
 // https://www.unknowncheats.me/forum/apex-legends/319804-apex-legends-reversal-structs-offsets.html
-// GameVersion = v3.0.68.50
+// GameVersion = v3.0.70.55
 
-// Cheat
-std::string CheatVersion = "Version 1.1.1";
-std::string GameVersion = "v3.0.68.50";
+std::string CheatVersion = "Version 1.1.2";
+std::string GameVersion = "v3.0.70.55";
 
 // Core
-constexpr long OFF_REGION = 0x140000000;               //[Static]->Region
-constexpr long OFF_LEVEL = 0x17c6120;        //[Miscellaneous]->LevelName
-constexpr long OFF_LOCAL_PLAYER = 0x2259868; //[Miscellaneous]->LocalPlayer
-constexpr long OFF_ENTITY_LIST = 0x1eaacc8;  //[Miscellaneous]->cl_entitylist
+constexpr long OFF_REGION = 0x140000000;     //[Static]->Region
+constexpr long OFF_LEVEL = 0x17c7160;        //[Miscellaneous]->LevelName
+constexpr long OFF_LOCAL_PLAYER = 0x225a8a8; //[Miscellaneous]->LocalPlayer
+constexpr long OFF_ENTITY_LIST = 0x1eabd08;  //[Miscellaneous]->cl_entitylist
 constexpr long OFF_NAME_INDEX = 0x38;        //nameIndex
-constexpr long OFF_NAME_LIST = 0xc790230;    //[Miscellaneous]->NameList
-constexpr long OFF_GAMEMODE = 0x02291170;    //mp_gamemode
+constexpr long OFF_NAME_LIST = 0xc7912b0;    //[Miscellaneous]->NameList
+constexpr long OFF_GAMEMODE = 0x22921b0;    // mp_gamemode
 constexpr long OFF_SQUAD_ID = 0x0334;        //m_squadID
-constexpr long OFF_GLOBAL_VARS = 0x17c5c20;  //[Miscellaneous]->GlobalVars
+constexpr long OFF_GLOBAL_VARS = 0x17c6c60;  //[Miscellaneous]->GlobalVars
 
 // HUD
-constexpr long OFF_VIEWRENDER = 0x74dbfa8; //[Miscellaneous]->ViewRenderer
+constexpr long OFF_VIEWRENDER = 0x74dd028; //[Miscellaneous]->ViewRenderer
 constexpr long OFF_VIEWMATRIX = 0x11a350;  //[Miscellaneous]->ViewMatrix
 
 // Buttons
-constexpr long OFF_INATTACK = 0x074dd240;         //[Buttons]->in_attack
-constexpr long OFF_IN_JUMP = 0x074dd320;          //[Buttons]->in_jump
-constexpr long OFF_IN_DUCK = 0x074dd420;          //[Buttons]->in_duck
-constexpr long OFF_IN_FORWARD = 0x074dd170;       //[Buttons]->in_forward
+constexpr long OFF_INATTACK = 0x74de2a0;         //[Buttons]->in_attack
+constexpr long OFF_IN_JUMP = 0x74de3a0;          //[Buttons]->in_jump
+constexpr long OFF_IN_DUCK = 0x74de4a0;          //[Buttons]->in_duck
+constexpr long OFF_IN_FORWARD = 0x74de1f0;       //[Buttons]->in_forward
 constexpr long OFF_TRAVERSAL_START_TIME = 0x2af0; //[RecvTable.DT_LocalPlayerExclusive]->m_traversalStartTime
 constexpr long OFF_TRAVERSAL_PROGRESS = 0x2aec;   //[RecvTable.DT_LocalPlayerExclusive]->m_traversalProgress
 constexpr long OFF_WALL_RUN_START_TIME = 0x3594;  //[RecvTable.DT_LocalPlayerExclusive]->m_wallRunStartTime
@@ -53,6 +52,7 @@ constexpr long OFF_VIEW_ANGLES = 0x2534 - 0x14; //[DataMap.C_Player]-> m_ammoPoo
 constexpr long OFF_PUNCH_ANGLES = 0x2438;       //[DataMap.C_Player]->m_currentFrameLocalPlayer.m_vecPunchWeapon_Angle
 constexpr long OFF_YAW = 0x223c - 0x8;          //m_currentFramePlayer.m_ammoPoolCount - 0x8
 constexpr long OFF_MODELNAME = 0x0030;          //m_ModelName
+constexpr long OFF_OBSERVER_LIST = 0x1EADD28;   //observerList: 48 8B 0D ? ? ? ? 48 85 C9 74 ? 48 8B 01 FF ? ? 48 85 C0 74 ? 48 63 4E 38     22.05.24
 
 // Weapon
 constexpr long OFF_WEAPON_HANDLE = 0x1934;            //[RecvTable.DT_Player]->m_latestPrimaryWeapons
@@ -68,9 +68,9 @@ constexpr long OFF_WEAPON_DISCARDED = 0x1599;         //[RecvTable.DT_WeaponX]->
 constexpr long OFF_VIEWMODELS = 0x2d18;               //m_hViewModels
 
 // Glow
-constexpr long OFF_HIGHLIGHT_TYPE_SIZE = 0x34;                //                         
-constexpr long OFF_GLOW_ENABLE = 0x26c;                       //Script_Highlight_GetCurrentContext
-constexpr long OFF_GLOW_THROUGH_WALL = 0x26c;                 //Script_Highlight_SetVisibilityType     
-constexpr long OFF_GLOW_FIX = 0x268;                        //                                      
-constexpr long OFF_GLOW_HIGHLIGHT_ID = 0x28C;                 //[DT_HighlightSettings].m_highlightServerActiveStates     
-constexpr long OFF_GLOW_HIGHLIGHTS = 0xade4bc0;                //highlightsettings 
+constexpr long OFF_HIGHLIGHT_TYPE_SIZE = 0x34;  //
+constexpr long OFF_GLOW_ENABLE = 0x26c;         //Script_Highlight_GetCurrentContext
+constexpr long OFF_GLOW_THROUGH_WALL = 0x26c;   //Script_Highlight_SetVisibilityType
+constexpr long OFF_GLOW_FIX = 0x268;            //
+constexpr long OFF_GLOW_HIGHLIGHT_ID = 0x28C;   //[DT_HighlightSettings].m_highlightServerActiveStates
+constexpr long OFF_GLOW_HIGHLIGHTS = 0xade5c40; //highlightsettings
